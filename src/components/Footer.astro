@@ -4,10 +4,6 @@ import FormField from "./FormField.astro";
 ---
 
 <footer class="p-8 grid gap-4 items-start [&_div:first-child]:font-bold md:grid-cols-2 md:px-8 md:py-16 lg:grid-cols-3">
-  <!--   <div class="flex  bg-darkGray p-4 text-white">
-    <label for="" class="font-normal">I agree to allow Spark School to store and process my personal data</label>
-    <input type="checkbox" name="" id="" class="w-8 h-8 bg-offWhite border-none rounded-md text-sparkBlue focus-within:ring focus-within:ring-sparkPink" />
-  </div> -->
   <div class="flex gap-4 mt-4 md:row-start-2 md:row-span-2">
     <a class="p-3 bg-darkGray rounded-md block w-fit text-offWhite hover:bg-sparkPink transition-colors"> <Icon name="bi:twitter" class="w-6 h-6" /></a>
     <a class="p-3 bg-darkGray rounded-md block w-fit text-offWhite hover:bg-sparkPink transition-colors"> <Icon name="bi:facebook" class="w-6 h-6" /></a>
@@ -43,19 +39,13 @@ import FormField from "./FormField.astro";
   </dialog> -->
 
   <div id="contactFormDialog" aria-labelledby="Contact Form Dialog" aria-hidden="true" class="dialog-container">
-    <!-- 2. The dialog overlay -->
     <div data-a11y-dialog-hide class="dialog-overlay"></div>
-    <!-- 3. The actual dialog -->
 
-    <!-- 4. The close button -->
-    <button type="button" data-a11y-dialog-hide aria-label="Close dialog"> &times;</button>
-    <!-- 5. The dialog title -->
-
-    <!-- 6. Dialog content -->
     <div class="dialog-content">
       <div class="grid py-8 items-center px-16 bg-sparkBlue">
-        <div class="">
+        <div class="relative">
           <h2 class="text-white text-4xl font-bold md:text-6xl text-center">Contact Us</h2>
+          <button type="button" data-a11y-dialog-hide aria-label="Close dialog" class="text-2xl text-white w-10 h-10 rounded-full absolute bg-sparkOrange top-0 -right-8 md:hidden"> &times;</button>
         </div>
       </div>
       <div class="grid py-8 items-center px-8 bg-darkGray [&_label]:text-white [&_label]:mb-2 md:place-items-center">
@@ -74,7 +64,7 @@ import FormField from "./FormField.astro";
             </div>
             <FormField labelName="Your message" formType="textarea" />
 
-            <div class="mt-2">
+            <div class="mt-2 grid gap-4">
               <FormField labelName="I allow Spark School to store and process my personal data" formType="checkbox" />
               <FormField labelName="I allow Spark School to store and process my personal data" formType="checkbox" />
               <FormField labelName="I allow Spark School to store and process my personal data" formType="checkbox" />
@@ -147,9 +137,7 @@ import FormField from "./FormField.astro";
     overflow: auto;
     max-height: 90vh;
     border-radius: 1rem;
-    animation:
-      fade-in 400ms 200ms both,
-      slide-up 400ms 200ms both;
+    animation: fade-in 400ms 200ms both, slide-up 400ms 200ms both;
   }
 
   @keyframes fade-in {

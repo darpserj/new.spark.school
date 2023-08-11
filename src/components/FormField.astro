@@ -37,7 +37,9 @@ const { formType, labelName, selectOptions } = Astro.props;
       case "checkbox":
         return (
           <div class="flex w-full flex-row-reverse items-start gap-4">
-            <label for="">{labelName}</label>
+            <label for="" class="md:mr-auto">
+              {labelName}
+            </label>
             <Input formType={formType} />
           </div>
         );
