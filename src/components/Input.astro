@@ -1,0 +1,29 @@
+---
+const { formType, selectOptions } = Astro.props;
+---
+
+{
+  (() => {
+    switch (formType) {
+      case "text":
+        return <input type="text" class="py-2 rounded-md focus-within:ring focus-within:ring-sparkBlue focus-within:ring-offset-4 focus-within:ring-offset-darkGray outline-none px-4 md:transition-all bg-offWhite" />;
+      case "email":
+        return <input type="email" class="py-2 rounded-md focus-within:ring focus-within:ring-sparkBlue focus-within:ring-offset-4 focus-within:ring-offset-darkGray outline-none px-4 md:transition-all bg-offWhite" />;
+      case "select":
+        return (
+          <select class="py-2 rounded-md focus-within:ring focus-within:ring-sparkBlue focus-within:ring-offset-4 focus-within:ring-offset-darkGray outline-none px-4 md:transition-all bg-offWhite">
+            <option value="">Please Select</option>
+            {selectOptions.map((option) => (
+              <option value={option}>{option}</option>
+            ))}
+          </select>
+        );
+      case "checkbox":
+        return <input type="checkbox" name="" id="" class="w-8 h-8 bg-offWhite border-none rounded-md text-sparkBlue focus-within:ring focus-within:ring-sparkPink" />;
+      case "textarea":
+        return <textarea class=" bg-offWhite py-2 rounded-md focus-within:ring focus-within:ring-sparkBlue focus-within:ring-offset-4 focus-within:ring-offset-darkGray outline-none px-4 md:transition-all md:min-w-[75ch]" />;
+      default:
+        return null;
+    }
+  })()
+}

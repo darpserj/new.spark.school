@@ -1,0 +1,166 @@
+---
+import { Icon } from "astro-icon";
+import FormField from "./FormField.astro";
+---
+
+<footer class="p-8 grid gap-4 items-start [&_div:first-child]:font-bold md:grid-cols-2 md:px-8 md:py-16 lg:grid-cols-3">
+  <!--   <div class="flex  bg-darkGray p-4 text-white">
+    <label for="" class="font-normal">I agree to allow Spark School to store and process my personal data</label>
+    <input type="checkbox" name="" id="" class="w-8 h-8 bg-offWhite border-none rounded-md text-sparkBlue focus-within:ring focus-within:ring-sparkPink" />
+  </div> -->
+  <div class="flex gap-4 mt-4 md:row-start-2 md:row-span-2">
+    <a class="p-3 bg-darkGray rounded-md block w-fit text-offWhite hover:bg-sparkPink transition-colors"> <Icon name="bi:twitter" class="w-6 h-6" /></a>
+    <a class="p-3 bg-darkGray rounded-md block w-fit text-offWhite hover:bg-sparkPink transition-colors"> <Icon name="bi:facebook" class="w-6 h-6" /></a>
+    <a class="p-3 bg-darkGray rounded-md block w-fit text-offWhite hover:bg-sparkPink transition-colors"> <Icon name="bi:instagram" class="w-6 h-6" /></a>
+    <a class="p-3 bg-darkGray rounded-md block w-fit text-offWhite hover:bg-sparkPink transition-colors"> <Icon name="bi:linkedin" class="w-6 h-6" /></a>
+  </div>
+
+  <div class="flex flex-col">
+    <p class="text-2xl font-bold">&copy; Spark Online School SRL</p>
+    <p>All rights Reserved</p>
+  </div>
+
+  <div class="flex flex-col">
+    <p class="text-xl font-bold">Careers</p>
+    <a class="hover:underline hover:underline-offset-4">Submit a CV</a>
+  </div>
+
+  <div class="flex flex-col">
+    <p class="font-bold text-xl">Email us at:</p>
+    <button class="w-fit underline underline-offset-4 flex items-center"><Icon name="bi:hand-index-thumb" class="w-6 h-6 inline mr-2 rotate-90" />contact@spark.school</button>
+    <button class="w-fit hover:underline hover:underline-offset-4" type="button" data-a11y-dialog-show="contactFormDialog">Contact form</button>
+  </div>
+
+  <div class="flex flex-col">
+    <p class="font-bold text-xl">Legal</p>
+    <a href="" class="hover:underline hover:underline-offset-4">Privacy policy</a>
+    <a href="" class="hover:underline hover:underline-offset-4">Cookie Policy</a>
+    <a href="" class="hover:underline hover:underline-offset-4">Terms and Conditions</a>
+  </div>
+
+  <!--   <dialog open class="fixed w-full h-full inset-0 overflow-y-scroll overflow-x-hidden">
+    
+  </dialog> -->
+
+  <div id="contactFormDialog" aria-labelledby="Contact Form Dialog" aria-hidden="true" class="dialog-container">
+    <!-- 2. The dialog overlay -->
+    <div data-a11y-dialog-hide class="dialog-overlay"></div>
+    <!-- 3. The actual dialog -->
+
+    <!-- 4. The close button -->
+    <button type="button" data-a11y-dialog-hide aria-label="Close dialog"> &times;</button>
+    <!-- 5. The dialog title -->
+
+    <!-- 6. Dialog content -->
+    <div class="dialog-content">
+      <div class="grid py-8 items-center px-16 bg-sparkBlue">
+        <div class="">
+          <h2 class="text-white text-4xl font-bold md:text-6xl text-center">Contact Us</h2>
+        </div>
+      </div>
+      <div class="grid py-8 items-center px-8 bg-darkGray [&_label]:text-white [&_label]:mb-2 md:place-items-center">
+        <div class="">
+          <form class="grid gap-2">
+            <div class="md:flex md:gap-4">
+              <FormField labelName="First Name" formType="text" />
+              <FormField labelName="Last Name" formType="text" />
+            </div>
+
+            <FormField labelName="Email" formType="email" />
+            <div class="md:flex md:gap-4">
+              <FormField labelName="Country" formType="select" formType="select" selectOptions={["Tasmania", "Romania", "Anglia"]} />
+              <FormField labelName="You are" formType="select" selectOptions={["Parent", "Teacher", "Student"]} />
+              <FormField labelName="How did you hear about us" formType="select" selectOptions={["Option1", "Option2", "Option3"]} />
+            </div>
+            <FormField labelName="Your message" formType="textarea" />
+
+            <div class="mt-2">
+              <FormField labelName="I allow Spark School to store and process my personal data" formType="checkbox" />
+              <FormField labelName="I allow Spark School to store and process my personal data" formType="checkbox" />
+              <FormField labelName="I allow Spark School to store and process my personal data" formType="checkbox" />
+            </div>
+            <button type="submit" class="text-base bg-sparkBlue rounded-md py-4 mt-4">Submit message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  import A11yDialog from "a11y-dialog";
+  const element = document.getElementById("contactFormDialog");
+  const dialog = new A11yDialog(element);
+</script>
+
+<style is:inline>
+  /**
+ * 1. Make the dialog container, and its child overlay spread across
+ *    the entire window.
+ */
+  .dialog-container,
+  .dialog-overlay {
+    position: fixed; /* 1 */
+    top: 0; /* 1 */
+    right: 0; /* 1 */
+    bottom: 0; /* 1 */
+    left: 0; /* 1 */
+  }
+
+  /**
+ * 1. Make sure the dialog container and all its descendants sits on
+ *    top of the rest of the page.
+ * 2. Make the dialog container a flex container to easily center the
+ *    dialog.
+ */
+  .dialog-container {
+    z-index: 2; /* 1 */
+    display: flex; /* 2 */
+  }
+
+  /**
+ * 1. Make sure the dialog container and all its descendants are not
+ *    visible and not focusable when it is hidden.
+ */
+  .dialog-container[aria-hidden="true"] {
+    display: none; /* 1 */
+  }
+
+  /**
+ * 1. Make the overlay look like an overlay.
+ */
+  .dialog-overlay {
+    background-color: rgb(43 46 56 / 0.9); /* 1 */
+    animation: fade-in 200ms both;
+  }
+
+  /**
+ * 1. Vertically and horizontally center the dialog in the page.
+ * 2. Make sure the dialog sits on top of the overlay.
+ * 3. Make sure the dialog has an opaque background.
+ */
+  .dialog-content {
+    margin: auto; /* 1 */
+    z-index: 2; /* 2 */
+    position: relative; /* 2 */
+    background-color: white; /* 3 */
+    overflow: auto;
+    max-height: 90vh;
+    border-radius: 1rem;
+    animation:
+      fade-in 400ms 200ms both,
+      slide-up 400ms 200ms both;
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+  }
+
+  @keyframes slide-up {
+    from {
+      transform: translateY(10%);
+    }
+  }
+</style>
