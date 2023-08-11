@@ -1,0 +1,73 @@
+---
+import Icon from "astro-icon";
+import freeTime from "../images/free-time.png";
+---
+
+<section class="">
+  <div class="grid py-16 min-h-[15rem] items-center px-16" style=`background-image: url(${freeTime}); background-size:cover; background-position:65% 0%; background-color: darkgrey; background-blend-mode: multiply;`>
+    <div class="">
+      <h2 class="text-white text-4xl font-bold md:text-6xl">Spark Courses</h2>
+      <p class="text-white max-w-[80ch]">
+        Spark courses are ideal for students who: want an introduction to the curriculum and international standards for studying abroad, seek new concepts and perspectives in a specific subject, have a passion for a subject not available in the
+        traditional schooling system like law or attend an international school without a specific subject available.
+      </p>
+    </div>
+  </div>
+  <div class="grid md:grid-cols-3 bg-darkGray text-white" id="minimumOffer">
+    <div class="px-16 pt-16 pb-8 md:px-8 lg:px-16 grid">
+      <div class="">
+        <h3 class="font-bold text-3xl text-sparkPink">Academic courses</h3>
+        <p class="t text-sparkPink">With support and guidance from a tutor and 1:1 sessions</p>
+        <ul class="courseDetails">
+          <li class=""><Icon name="icon-park-outline:dot" class="inline w-6 h-6 text-sparkPink" /> Cambridge Courses available for IGCSE, AS or A2 levels</li>
+          <li class=""><Icon name="icon-park-outline:dot" class="inline w-6 h-6 text-sparkPink" />Access to our online learning platform</li>
+          <li class=""><Icon name="icon-park-outline:dot" class="inline w-6 h-6 text-sparkPink" />Flexible schedule</li>
+          <li class=""><Icon name="icon-park-outline:dot" class="inline w-6 h-6 text-sparkPink" />Self-paced with tutor</li>
+          <li class=""><Icon name="icon-park-outline:dot" class="inline w-6 h-6 text-sparkPink" />Flexible exams calendar: 2 sessions in May & October</li>
+          <li class=""><Icon name="icon-park-outline:dot" class="inline w-6 h-6 text-sparkPink" />Cambridge certificate accepted for university admission in 180 countries</li>
+        </ul>
+        <ul>
+          <li class="font-bold">IGCSE: 1450EUR/ course</li>
+          <li class="font-bold">AS/A2: 1850 EUR/ Course</li>
+        </ul>
+      </div>
+    </div>
+    <div class="px-16 pt-16 pb-8 md:px-8 lg:px-16 grid">
+      <div class="">
+        <h3 class="font-bold text-3xl text-sparkGreen">Academic courses</h3>
+        <p class="text-sparkGreen">Without support or guidance from a tutor, course only</p>
+        <ul class="courseDetails">
+          <li><Icon name="icon-park-outline:dot" class="inline w-6 h-6 text-sparkGreen" />Cambridge Courses available for IGCSE, AS or A2 levels</li>
+          <li><Icon name="icon-park-outline:dot" class="inline w-6 h-6 text-sparkGreen" />Access to our online learning platform</li>
+          <li><Icon name="icon-park-outline:dot" class="inline w-6 h-6 text-sparkGreen" />Self-paced</li>
+          <li><Icon name="icon-park-outline:dot" class="inline w-6 h-6 text-sparkGreen" />Flexible Schedule</li>
+          <li><Icon name="icon-park-outline:dot" class="inline w-6 h-6 text-sparkGreen" />Flexible exams calendar: 2 sessions in May & October</li>
+          <li><Icon name="icon-park-outline:dot" class="inline w-6 h-6 text-sparkGreen" />Cambridge certificate accepted for university admission in 180 countries</li>
+        </ul>
+        <p class="font-bold">Starting from 450 EUR/ Course</p>
+      </div>
+    </div>
+    <div class="px-16 pt-16 pb-8 md:px-8 lg:px-16 grid">
+      <div class="">
+        <h3 class="font-bold text-3xl text-sparkBlue">Extracurricular courses</h3>
+        <p class="text-sparkBlue">No support or guidance from a tutor, course only</p>
+        <ul class="courseDetails">
+          <li><Icon name="icon-park-outline:dot" class="inline w-6 h-6 text-sparkBlue" />Access to our online learning platform</li>
+          <li><Icon name="icon-park-outline:dot" class="inline w-6 h-6 text-sparkBlue" />Personal development courses</li>
+          <li><Icon name="icon-park-outline:dot" class="inline w-6 h-6 text-sparkBlue" />Gain skills in areas such as Leadership, Wellbeing, Global Education</li>
+          <li><Icon name="icon-park-outline:dot" class="inline w-6 h-6 text-sparkBlue" />Self-paced, available at your convenience</li>
+        </ul>
+        <p class="font-bold">Starting from 150 EUR/ Course</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import Readmore from "readmore-js/dist/readmore.es6.js";
+  new Readmore(".courseDetails", {
+    moreLink: `<button class="inline !w-fit font-bold  mb-4">See the benefits</button>`,
+    lessLink: `<button class="inline !w-fit font-bold  mb-4">Read Less</button>`,
+    collapsedHeight: 0,
+  });
+</script>

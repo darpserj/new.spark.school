@@ -1,0 +1,43 @@
+---
+import fingerpainting from "../images/fingerpainting.png";
+---
+
+<section
+  id="hero"
+  class="min-h-[75vh] bg-center grid place-items-center md:min-h-[50vh] lg:min-h-[75vh] lg:!bg-[position:15%_55%]"
+  style=`background-image: url(${fingerpainting}); background-size:cover; background-position:65% 55%; background-color: lightgrey; background-blend-mode: multiply;`>
+  <div class="flex flex-col items-center justify-center md:flex-row p-8 lg:px-20">
+    <div class="flex-1">
+      <div class="text-white text-3xl md:text-6xl font-bold mb-4" id="heroHeadline">We are like no other high-school.</div>
+    </div>
+    <div class="flex-1" id="heroParagraph">
+      <div class="text-sparkOrange text-2xl font-bold">About Spark</div>
+
+      <p class="text-white mb-4 font-light" id="heroText">
+        We are like no other high school. Our innovative learning approach gives a fresh and alternative accredited take on education for young people aged 13 years and over. We blend academic learning with wellbeing and future readiness to equip the next
+        generation for the world. We offer the spark that will liberate your family. <br /> We are a Cambridge-accredited hybrid high school with experienced teachers that offers a new type of education. Our educational model combines online and in-person
+        learning and, most importantly, fits around you – your life, your family and your dreams.
+      </p>
+    </div>
+  </div>
+</section>
+
+<script>
+  import Readmore from "readmore-js/dist/readmore.es6.js";
+
+  function getHeightValue() {
+    if (window.innerWidth < 768) {
+      return 220;
+    } else if (window.innerWidth > 768 && window.innerWidth < 1024) {
+      return 168;
+    } else {
+      return 124;
+    }
+  }
+
+  new Readmore("#heroText", {
+    moreLink: `<button class="inline !w-fit text-white">Read More</button>`,
+    lessLink: `<button class="inline !w-fit text-white">Read Less</button>`,
+    collapsedHeight: getHeightValue(),
+  });
+</script>

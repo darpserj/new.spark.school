@@ -1,0 +1,47 @@
+---
+import cinematicImage from "../images/cinematic-image.png";
+import Icon from "astro-icon";
+---
+
+<section class="">
+  <div class="grid py-16 min-h-[15rem] items-center px-16" style=`background-image: url(${cinematicImage}); background-size:cover; background-position:65% 0%; background-color: darkgrey; background-blend-mode: multiply;`>
+    <div class="">
+      <h2 class="text-white text-4xl font-bold md:text-6xl">Spark Courses</h2>
+    </div>
+  </div>
+  <div class="grid md:grid-cols-3" id="minimumOffer">
+    <div class="px-16 pt-16 pb-8 grid place-items-center bg-darkGray text-white">
+      <div class="">
+        <h3 class="font-bold text-3xl text-sparkPink">Academic courses</h3>
+        <p class="text-sparkPink">Support and guidance from a tutor and 1:1 sessions</p>
+        <ul class="">
+          <li class=""><Icon name="icon-park-outline:dot" class="inline w-6 h-6 text-sparkPink" /> Between 5-7 subjects for IGCSE - self-paced and 30 sessions</li>
+          <li class=""><Icon name="icon-park-outline:dot" class="inline w-6 h-6 text-sparkPink" />Between 3-4 subjects for AS or A2 level - self-paced and 30 sessions</li>
+          <li class=""><Icon name="icon-park-outline:dot" class="inline w-6 h-6 text-sparkPink" />Weekly commitment of around 6h/ subject which includes self-study time, online reading or 1:1 tutoring</li>
+        </ul>
+      </div>
+    </div>
+    <div class="px-16 pt-16 pb-8 grid bg-darkGray text-white">
+      <div class="">
+        <h3 class="font-bold text-3xl text-sparkGreen">Academic courses</h3>
+        <p class="text-sparkGreen">No support or guidance from a tutor, course only</p>
+        <ul class="">
+          <li><Icon name="icon-park-outline:dot" class="inline w-6 h-6 text-sparkGreen" />23 Wellbeing sessions with Learning Journey Advisors (LJA)</li>
+          <li><Icon name="icon-park-outline:dot" class="inline w-6 h-6 text-sparkGreen" />Self-paced wellbeing course</li>
+          <li><Icon name="icon-park-outline:dot" class="inline w-6 h-6 text-sparkGreen" />Relationship policy (includes anti-bullying)</li>
+          <li><Icon name="icon-park-outline:dot" class="inline w-6 h-6 text-sparkGreen" />Safety & Safeguarding Policy</li>
+        </ul>
+      </div>
+    </div>
+    <div class="px-16 pt-16 pb-8 grid bg-darkGray text-white">
+      <div class="">
+        <h3 class="font-bold text-3xl text-sparkBlue">Extracurricular courses</h3>
+        <p class="text-sparkBlue">No support or guidance from a tutor, course only</p>
+        <ul>
+          <li><Icon name="icon-park-outline:dot" class="inline w-6 h-6 text-sparkBlue" />Purpose-driven career coaching</li>
+          <li><Icon name="icon-park-outline:dot" class="inline w-6 h-6 text-sparkBlue" />1 self-paced course/ year</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

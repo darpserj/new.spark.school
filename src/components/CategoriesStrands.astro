@@ -1,0 +1,66 @@
+---
+import videocall from "../images/videocalling-friends.png";
+import students from "../images/studs-in-highschool.png";
+import vlogger from "../images/vlogger-content-creator.png";
+import { Icon } from "astro-icon";
+---
+
+<section>
+  <div class="grid md:grid-cols-3" id="strands">
+    <div
+      class="min-h-[20rem] px-16 pt-24 pb-16 grid place-items-center md:px-8 lg:px-16"
+      style=`background-image: url(${videocall}); background-size:cover; background-position:65% 55%; background-color: darkgrey; background-blend-mode: multiply;`
+      id="academicsStrand">
+      <div class="">
+        <h3 class="font-bold text-3xl text-sparkPink">Academics</h3>
+        <p class="text-white">
+          The flipped learning model at Spark Hybrid Cambridge High School includes a mix of active and passive learning styles. Every student has the power to determine what learning path suits them best – choosing how, what, when and where they study.
+        </p>
+        <button id="studentsLearningBtn" class="text-sparkBlue font-bold flex items-center py-2">How our students learn <Icon name="ph:arrow-square-out-fill" class="w-6 h-6 inline" /></button>
+        <button id="examOverviewBtn" class="text-sparkGreen font-bold flex items-center py-2">Exam Overview <Icon name="ph:arrow-square-out-fill" class="w-6 h-6 inline" /></button>
+        <div id="studentsLearning" class="hidden">
+          The Hybrid Learning Model is based on 80% online learning - with the help of the Spark Online Learning Platform, online classes, tutoring sessions, assemblies, etc. - and 20% in-person learning - involving local schools, learning hubs, social
+          challenges, volunteering opportunities and much more.
+        </div>
+        <div id="examOverview" class="hidden">
+          Students enrolled in Years 11, 12 and 13 are eligible to participate in the <a href="https://www.cambridgeassessment.org.uk/Images/cambridge-approach-to-assessment.pdf" target="_blank"></a>Cambridge International Examinations and earn Cambridge
+          qualifications and certificates that are accepted for University enrolment in over 160 countries.
+        </div>
+      </div>
+    </div>
+    <div class="min-h-[20rem] px-16 pt-24 pb-16 grid md:px-8 lg:px-16" style=`background-image: url(${students}); background-size:cover; background-position:65% 55%; background-color: darkgrey; background-blend-mode: multiply;` id="wellbeingStrand">
+      <div class="">
+        <h3 class="font-bold text-3xl text-sparkBlue">Wellbeing</h3>
+        <p class="text-white text-base">
+          We are a safe space for families to escape the traditional system. We are a transformative high school where families are encouraged to share contributions, mutual respect and work together to help teenagers be emotionally well.
+        </p>
+      </div>
+    </div>
+    <div class="min-h-[20rem] px-16 pt-24 pb-16 grid md:px-8 lg:px-16" style=`background-image: url(${vlogger}); background-size:cover; background-position:65% 55%; background-color: darkgrey; background-blend-mode: multiply;` id="futureStrand">
+      <div class="">
+        <h3 class="font-bold text-3xl text-sparkOrange">Future readiness</h3>
+        <p class="text-white">We cultivate the potential within every student and help them achieve it. Young learners will be prepared to become lifelong learners and have a foundation toolkit with essential skills to welcome their bright future.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import tippy from "tippy.js";
+  import "tippy.js/dist/tippy.css";
+
+  const studentsLearning = document.getElementById("studentsLearning");
+  console.log(studentsLearning);
+  const examOverview = document.getElementById("examOverview");
+  console.log(examOverview);
+
+  tippy("#studentsLearningBtn", {
+    content: studentsLearning?.innerText,
+    trigger: "click",
+  });
+
+  tippy("#examOverviewBtn", {
+    content: examOverview?.innerText,
+    trigger: "click",
+  });
+</script>

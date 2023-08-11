@@ -1,0 +1,62 @@
+---
+import familyPicture from "../images/father-daughter-studying.png";
+import Icon from "astro-icon";
+---
+
+<section id="testimonials">
+  <div class="min-h-[15rem] grid place-items-center md:justify-items-start md:px-8" style=`background-image: url(${familyPicture}); background-size:cover; background-position:65% 0%; background-color: darkgrey; background-blend-mode: multiply;`>
+    <div class="px-8">
+      <h2 class="text-white text-4xl font-bold md:text-6xl">Testimonials</h2>
+      <p class="text-white max-w-[80ch]">Shine bright. Stand out. We force the world to rethink education for high schoolers because the traditional school system is outdated and often does more harm than good.</p>
+    </div>
+  </div>
+  <div class="grid md:grid-cols-4 [&>:nth-child(odd)_button]:bg-offWhite [&>:nth-child(odd)_button]:text-black [&>:nth-child(even)_button]:text-white [&>:nth-child(even)_button]:bg-darkGray" id="minimumOffer">
+    <div class="px-16 pt-16 md:px-8 pb-8 grid bg-darkGray text-white">
+      <div class="">
+        <p class="collapsible">
+          “Within two months, Tashi will have completed his first year at Spark and we can say that this school is what we ever dreamed of for him. Tashi flourished in many aspects and we, as parents, are very happy with his progress and with the space he
+          has for cultivating his own interests. After the Spark experience, we cannot even contemplate the possibility of another type of educational environment for our child.”
+        </p>
+        <p class="text-sparkBlue">Răzvan D (Tashi’s father)</p>
+      </div>
+    </div>
+    <div class="px-16 pt-16 md:px-8 pb-8 grid bg-offWhite">
+      <div class="">
+        <p class="collapsible">
+          "I’ve always been passionate about robotics and aerospace engineering for the past 5 years. I enjoy designing, building, and experimenting with my own STEAM projects. After all, the best way to learn is by doing, but I always struggled with
+          managing both school and my projects, so this is where Spark came in. Spark is one of the few schools that actually prepares you for the real world and helps you find a goal in life. I want to be a NASA aerospace engineer, what do you want to
+          become?”
+        </p>
+        <p class="text-sparkGreen">Vlad M, year 11</p>
+      </div>
+    </div>
+    <div class="px-16 pt-16 md:px-8 pb-8 grid bg-darkGray text-white">
+      <div class="">
+        <p class="collapsible">
+          “I am delighted with my daughter's process. She expressed her satisfaction with Spark, but I also see her enthusiasm every day in how she conducts her life: she makes clear choices, thinks for herself, knows how to accept or refuse without
+          getting defensive or offensive, is aware of her value and expects others to recognize it. More than this, she's asking for help when needed, and most importantly, she treats people with kindness and expects to be treated the same way. In this
+          phase of her development, Spark has undoubtedly been a decisive environment"
+        </p>
+        <p class="text-sparkBlue">Dana D, (mother of Diana D, year 13)</p>
+      </div>
+    </div>
+    <div class="px-16 pt-16 md:px-8 lg:px-16 pb-8 grid bg-offWhite">
+      <div class="">
+        <p class="collapsible">
+          “What I like most about Spark is the freedom to study at my own level, which is crucial for any kind of performance. The fact that I can choose what subjects to study helps me focus more on my most important passion, mathematics. Spark also
+          offers me the possibility to learn things applicable to real life and focuses on developing every student as a whole.”
+        </p>
+        <p class="text-sparkGreen">Alexandru D (also known as Tashi) - year 11</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import Readmore from "readmore-js/dist/readmore.es6.js";
+  new Readmore(".collapsible", {
+    moreLink: `<button class="inline !w-fit my-2 p-1 rounded-md">Read More</button>`,
+    lessLink: `<button class="inline !w-fit my-2 p-1 rounded-md">Read Less</button>`,
+    collapsedHeight: 196,
+  });
+</script>

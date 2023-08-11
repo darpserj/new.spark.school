@@ -1,0 +1,72 @@
+---
+import streamer from "../images/streaming-video-game.png";
+import jumpingGirl from "../images/jumping-girl.jpg";
+import { Icon } from "astro-icon";
+---
+
+<section class="" id="tuitionfees">
+  <div class="grid py-16 min-h-[15rem] items-center px-16" style=`background-image: url(${streamer}); background-size:cover; background-position:65% 0%; background-color: darkgrey; background-blend-mode: multiply;`>
+    <div class="">
+      <h2 class="text-white text-4xl font-bold md:text-6xl">Tuition & fees</h2>
+      <p class="text-white max-w-[80ch]">Spark flexible schooling offers an alternative learning path for those who dare to think differently. You have all the flexibility to choose from our offerings.</p>
+    </div>
+  </div>
+  <div class="grid md:grid-cols-3 items-stretch" id="minimumOffer">
+    <div class="px-16 pt-16 pb-8 md:px-8 lg:px-16 grid bg-offWhite">
+      <div class="">
+        <h3 class="font-bold text-3xl text-sparkPink mb-4">Academics</h3>
+        <ul class="">
+          <li class="">
+            <Icon name="icon-park-outline:dot" class="inline w-6 h-6 text-sparkPink" /> Choose any of the 55+ Cambridge Self-paced courses created around how teenagers' brains learn. <span class="font-bold text-sparkPink">See all the courses</span>
+          </li>
+          <li class=""><Icon name="icon-park-outline:dot" class="inline w-6 h-6 text-sparkPink" />Weekly commitment of around 6h / subject</li>
+          <li class=""><Icon name="icon-park-outline:dot" class="inline w-6 h-6 text-sparkPink" />Courses available at any time on our innovative platform</li>
+          <li class=""><Icon name="icon-park-outline:dot" class="inline w-6 h-6 text-sparkPink" />Peer-to-peer learning</li>
+        </ul>
+      </div>
+    </div>
+    <div class="px-16 pt-16 pb-8 grid md:px-8 lg:px-16 bg-darkGray text-white">
+      <div class="">
+        <h3 class="font-bold text-3xl text-sparkBlue mb-4">Wellbeing</h3>
+        <ul class="">
+          <li><Icon name="icon-park-outline:dot" class="inline w-6 h-6 text-sparkBlue" />23 Wellbeing sessions with Learning Journey Advisors (LJA)</li>
+          <li><Icon name="icon-park-outline:dot" class="inline w-6 h-6 text-sparkBlue" />Self-paced wellbeing course</li>
+          <li><Icon name="icon-park-outline:dot" class="inline w-6 h-6 text-sparkBlue" />Relationship policy (includes anti-bullying)</li>
+          <li><Icon name="icon-park-outline:dot" class="inline w-6 h-6 text-sparkBlue" />Safety & Safeguarding Policy</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="px-16 pt-16 pb-8 md:px-8 lg:px-16 grid bg-offWhite">
+      <div class="">
+        <h3 class="font-bold text-3xl text-sparkOrange mb-4">Future readiness</h3>
+        <ul>
+          <li><Icon name="icon-park-outline:dot" class="inline w-6 h-6 text-sparkOrange" />Purpose-driven career coaching</li>
+          <li><Icon name="icon-park-outline:dot" class="inline w-6 h-6 text-sparkOrange" />1 self-paced course/ year</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="min-h-[25rem] grid place-items-center md:justify-items-start md:px-8 py-16" style=`background-image: url(${jumpingGirl}); background-size:cover; background-position:65% 35%; background-color: darkgrey; background-blend-mode: multiply;`>
+    <div class="px-8 flex flex-col gap-4 md:flex-row md:gap-24 lg:justify-between lg:w-full lg:px-16">
+      <div class="grid text-white">
+        <h2 class="text-4xl font-bold uppercase mb-4">igcse</h2>
+        <div class="">
+          <a href="/" class="font-bold hover:underline bg-sparkPink p-1 rounded-md block">See the IGCSE course catalogue here</a>
+          <p>Tuition fees: starting from <span class="font-bold">4850 EUR/year</span></p>
+        </div>
+      </div>
+      <div class="p-1 bg-sparkGreen md:self-end text-white rounded-md mt-4 order-3 md:order-none md:text-center md:hover:underline lg:font-bold lg:-mb-12 lg:text-xl lg:px-16">
+        <a href="#" target="_blank" rel="">Fill in the enquiry form</a>
+      </div>
+      <div class="grid text-white">
+        <h2 class="text-4xl font-bold uppercase mb-4">as/a2 levels</h2>
+        <div class="">
+          <a href="/" class="font-bold hover:underline block bg-sparkBlue p-1 rounded-md mb-2">See the AS course catalogue here</a>
+          <a href="/" class="font-bold hover:underline block bg-sparkOrange p-1 rounded-md mb-2">See the A2 course catalogue here</a>
+          <p>Tuition fees: starting from <span class="font-bold">4850 EUR/year</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

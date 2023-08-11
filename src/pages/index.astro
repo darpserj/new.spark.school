@@ -1,15 +1,92 @@
 ---
+import HeroAboutSpark from "../components/HeroAboutSpark.astro";
+import CategoriesStrands from "../components/CategoriesStrands.astro";
+import EmptySpace from "../components/EmptySpace.astro";
+import TuitionFees from "../components/TuitionFees.astro";
+import SparkOffer from "../components/SparkOffer.astro";
+import Testimonials from "../components/Testimonials.astro";
+import SparkCourses from "../components/SparkCourses.astro";
+import AdmissionProcess from "../components/AdmissionProcess.astro";
+import Hero from "../components/Hero.astro";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="stylesheet" href="https://use.typekit.net/opz8zpk.css" />
+    <title>Spark School</title>
+  </head>
+  <body class="font-['century-gothic'] bg-offWhite">
+    <div id="first">
+      <Hero />
+      <HeroAboutSpark />
+      <CategoriesStrands />
+    </div>
+    <AdmissionProcess />
+    <TuitionFees />
+    <SparkCourses />
+    <Testimonials />
+  </body>
 </html>
+
+<!-- <script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.from("#heroHeadline", { x: 100, duration: 3 });
+  gsap.from("#heroHeadline", { opacity: 0, duration: 3 });
+  gsap.from("#heroParagraph", { opacity: 0, duration: 3 });
+  let mm = gsap.matchMedia();
+
+  mm.add("(min-width:768px)", () => {
+    const tl = gsap.timeline();
+    tl.from("#strands", {
+      /*       scrollTrigger: {
+        pin: "#first",
+        start: "bottom bottom",
+        end: () => `+=${document.querySelector("#academicsStrand").offsetHeight * 13}`,
+      }, */
+    })
+      .from("#academicsStrand", {
+        x: -100,
+        opacity: 0,
+        duration: 2,
+        scrollTrigger: "#strands",
+        /*         scrollTrigger: {
+          start: "top center",
+          end: () => `+=${document.querySelector("#academicsStrand").offsetHeight * 2}`,
+          scrub: 2,
+          trigger: "#academicsStrand",
+        }, */
+      })
+      .from("#wellbeingStrand", {
+        opacity: 0,
+        duration: 2,
+        scrollTrigger: "#strands",
+
+        /*         scrollTrigger: {
+          scrub: 2,
+          trigger: "#academicsStrand",
+          start: () => `+=${document.querySelector("#academicsStrand").offsetHeight * 3}`,
+          end: () => `+=${document.querySelector("#academicsStrand").offsetHeight * 3}`,
+          markers: true,
+        }, */
+      })
+      .from("#futureStrand", {
+        opacity: 0,
+        x: 200,
+        duration: 2,
+        /*         scrollTrigger: {
+          scrub: 2,
+          trigger: "#academicsStrand",
+          start: () => `+=${document.querySelector("#academicsStrand").offsetHeight * 6}`,
+          end: () => `+=${document.querySelector("#academicsStrand").offsetHeight * 6}`,
+          markers: true,
+        }, */
+      });
+  });
+</script> -->
