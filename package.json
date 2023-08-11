@@ -7,7 +7,8 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "gh-deploy-init": "git push origin && git subtree push --prefix dist origin gh-pages"
   },
   "dependencies": {
     "@astrojs/tailwind": "^4.0.0",
